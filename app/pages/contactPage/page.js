@@ -100,7 +100,7 @@ export default function Contact() {
         <h2 className="text-xl font-semibold mb-2">İletişim Bilgilerimiz</h2>
         <p>E-posta: <a href="mailto:destek@kultursanat.com" className="underline">destek@kultursanat.com</a></p>
         <p>Telefon: +90 555 555 55 55</p>
-        <p>Adres: İstanbul, Türkiye</p>
+        <p>Adres: Konya, Türkiye</p>
       </div>
     </div>
   );

@@ -1,10 +1,11 @@
 import Link from "next/link";
 import React from "react";
 import Slider from "./slider";
+import "./globals.css";
 
 export default function Home() {
   return (
-    <div className="h-screen bg-[#9c7665]">
+    <div className="h-screen">
       <div className="flex justify-center items-center gap-x-10">
         <div className="flex flex-col justify-center items-center gap-y-5">
           <img

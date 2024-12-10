@@ -45,9 +45,9 @@ const Navbar = () => {
                             Sanatçılar
                         </Link>
                     </li>
-                    <li>
-                        <BiLogoTux className="size-6" />
-                    </li>
+                    <Link href="/">
+                        <img src="/rumaydin_logo.jpg" alt="" className="size-7" />
+                    </Link>
                     {/* <li>
                         <Link href="/pages/aboutPage">
                             About
