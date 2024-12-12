@@ -14,22 +14,22 @@ const Navbar = () => {
         try {
             await signOut(auth);
             window.location.href = 'pages/loginPage';
-            console.log("çıkış yapıldı")
+            console.log("çıkış yapıldı");
         } catch {
-            console.log(error.message)
+            console.log(error.message);
         }
-    }
+    };
 
     return (
-        <div className="w-full h-14 bg-neutral-900 sticky top-0">
-            <nav className="container mx-auto px-4 h-full flex justify-center items-center">
+        <div className="w-full h-14 sticky top-0 bg-[#CBB7A3] shadow-md border-b border-[#f5e4d4] rounded-b-xl">
+            <nav className="container mx-auto px-4 h-full flex justify-between items-center">
                 <button
-                    className="md:hidden text-white"
+                    className="md:hidden text-black"
                     onClick={() => setIsMenuOpen(!isMenuOpen)}
                 >
                     {isMenuOpen ? <FiX size={24} /> : <FiMenu size={24} />}
                 </button>
-                <ul className="hidden md:flex gap-x-28 text-white">
+                <ul className="hidden md:flex gap-x-28 text-black items-center">
                     <li>
                         <Link href="/">
                             Anasayfa
@@ -45,14 +45,15 @@ const Navbar = () => {
                             Sanatçılar
                         </Link>
                     </li>
-                    <Link href="/">
-                        <img src="/rumaydin_logo.jpg" alt="" className="size-7" />
-                    </Link>
-                    {/* <li>
-                        <Link href="/pages/aboutPage">
-                            About
+                    <li>
+                        <Link href="/">
+                            <img
+                                src="/logo.jpg"
+                                alt="Logo"
+                                className="h-20 object-contain"
+                            />
                         </Link>
-                    </li> */}
+                    </li>
                     <li>
                         <Link href="/pages/libraryPage">
                             Kütüphane
@@ -77,7 +78,7 @@ const Navbar = () => {
             </nav>
 
             {isMenuOpen && (
-                <div className="md:hidden bg-neutral-900 text-white">
+                <div className="md:hidden bg-[#ddc69d] text-black">
                     <ul className="flex flex-col items-center py-4">
                         <li>
                             <Link href="/">

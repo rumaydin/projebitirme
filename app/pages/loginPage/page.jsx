@@ -40,43 +40,43 @@ const LoginPage = () => {
     };
 
     return (
-        <div className='h-[95vh] flex justify-center items-center'>
-            <form className='bg-white p-8 rounded-xl shadow-lg w-80'>
-                <h2 className='text-2xl text-black font-semibold text-center mb-6'>Giriş Yap</h2>
-                <div className='flex flex-col mb-4'>
-                    <label htmlFor="email" className='text-sm font-medium text-gray-700'>E-mail:</label>
+        <div className='h-[95vh] flex justify-center items-center text-[#4B2E2E]'>
+            <form className='bg-[#F4EDE4] p-10 rounded-xl shadow-lg w-[400px]'>
+                <h2 className='text-3xl font-semibold text-center mb-8'>Giriş Yap</h2>
+                <div className='flex flex-col mb-6'>
+                    <label htmlFor="email" className='text-base font-medium mb-2'>E-mail:</label>
                     <input
                         id="email"
-                        className='border border-gray-300 rounded-lg p-3 mt-2 focus:outline-none focus:ring-2 focus:ring-blue-400 text-black'
+                        className='border border-gray-300 bg-[#F4EDE4] rounded-lg p-4 mt-2 focus:outline-none focus:ring focus:ring-[#4B2E2E] text-[#4B2E2E] text-lg'
                         type="email"
-                        placeholder='e-mail'
+                        placeholder='E-mail'
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                     />
                 </div>
-                <div className='flex flex-col mb-6'>
-                    <label htmlFor="password" className='text-sm font-medium text-gray-700'>Şifre:</label>
+                <div className='flex flex-col mb-8'>
+                    <label htmlFor="password" className='text-base font-medium mb-2'>Şifre:</label>
                     <input
                         id="password"
-                        className='border border-gray-300 rounded-lg p-3 mt-2 focus:outline-none focus:ring-2 focus:ring-blue-400 text-black'
+                        className='border border-gray-300 bg-[#F4EDE4] rounded-lg p-4 mt-2 focus:outline-none focus:ring focus:ring-[#4B2E2E] text-[#4B2E2E] text-lg'
                         type="password"
                         placeholder='Şifre'
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                     />
                 </div>
-                <div className='flex justify-center items-center gap-x-5'>
+                <div className='flex justify-center items-center gap-x-6'>
                     <button
                         onClick={register}
                         type="submit"
-                        className='w-24 py-1 bg-green-500 text-white rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400'
+                        className='w-32 py-2 bg-[#4B2E2E] text-white rounded-lg hover:bg-[#3A2323] focus:outline-none focus:ring focus:ring-[#4B2E2E] text-lg'
                     >
                         Kayıt Ol
                     </button>
                     <button
                         onClick={login}
                         type="submit"
-                        className='w-24 py-1 bg-blue-500 text-white rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400'
+                        className='w-32 py-2 bg-[#4B2E2E] text-white rounded-lg hover:bg-[#3A2323] focus:outline-none focus:ring focus:ring-[#4B2E2E] text-lg'
                     >
                         Giriş Yap
                     </button>

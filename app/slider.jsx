@@ -32,9 +32,9 @@ const Slider = () => {
             <div className="flex items-center justify-between w-full max-w-6xl p-4">
                 <button
                     onClick={handlePrev}
-                    className="text-white p-2 border rounded-full focus:outline-none"
+                    className="p-2 border-2 rounded-full focus:outline-none border-[#4B2E2E] text-[#4B2E2E]"
                 >
-                    <IoChevronBack className='size-6' />
+                    <IoChevronBack className="text-[#4B2E2E] size-6" />
                 </button>
                 <div className="flex overflow-hidden w-full">
                     {images.slice(currentIndex, currentIndex + 4).map((image, index) => (
@@ -45,17 +45,17 @@ const Slider = () => {
                                 className="w-full h-auto rounded-lg"
                             />
                             <div className="mt-2 text-center">
-                                <p className="text-sm text-gray-300">{content[currentIndex + index]?.description}</p>
+                                <p className="text-sm text-[#4B2E2E]">{content[currentIndex + index]?.description}</p>
                             </div>
                         </div>
                     ))}
                 </div>
                 <button
                     onClick={handleNext}
-                    className="text-white p-2 border rounded-full focus:outline-none"
+                    className="p-2 border-2 rounded-full focus:outline-none border-[#4B2E2E] text-[#4B2E2E]"
                     disabled={currentIndex >= images.length - 4}
                 >
-                    <GrFormNext className='size-6' />
+                    <GrFormNext className="text-[#4B2E2E] size-6" />
                 </button>
             </div>
         </div>

@@ -102,69 +102,69 @@ const artists = [
 ];
 
 const ArtistsPage = () => {
-    const [selectedArtist, setSelectedArtist] = useState(null);
-  
-    const openModal = (artist) => {
-      setSelectedArtist(artist);
-    };
-  
-    const closeModal = () => {
-      setSelectedArtist(null);
-    };
-  
-    return (
-      <div className="min-h-screen bg-[#ddc69d] py-10 px-5">
-        <h1 className="text-3xl font-bold text-center mb-10 text-[#4B2E2E]">
-          Sanatçılar
-        </h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          {artists.map((artist) => (
-            <div
-              key={artist.id}
-              onClick={() => openModal(artist)}
-              className="bg-[#f4e7d1] shadow-lg rounded-lg overflow-hidden cursor-pointer hover:shadow-xl transition-shadow duration-300"
-            >
-              <img
-                src={artist.image}
-                alt={artist.name}
-                className="w-full h-64 object-cover"
-              />
-              <div className="p-6">
-                <h2 className="text-2xl font-semibold text-[#4B2E2E]">
-                  {artist.name}
-                </h2>
-                <p className="text-[#4B2E2E] mt-4">{artist.bio}</p>
-              </div>
-            </div>
-          ))}
-        </div>
-  
-        {/* Modal */}
-        {selectedArtist && (
-          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-            <div className="bg-[#f4e7d1] rounded-lg shadow-lg w-11/12 md:w-2/3 lg:w-1/2 p-6 relative">
-              <button
-                onClick={closeModal}
-                className="absolute top-3 right-3 text-gray-500 hover:text-gray-800"
-              >
-                ✖
-              </button>
-              <img
-                src={selectedArtist.image}
-                alt={selectedArtist.name}
-                className="w-full h-64 object-cover rounded-md mb-4"
-              />
-              <h2 className="text-3xl font-bold text-[#4B2E2E]">
-                {selectedArtist.name}
+  const [selectedArtist, setSelectedArtist] = useState(null);
+
+  const openModal = (artist) => {
+    setSelectedArtist(artist);
+  };
+
+  const closeModal = () => {
+    setSelectedArtist(null);
+  };
+
+  return (
+    <div className="min-h-screen py-10 px-5">
+      <h1 className="text-3xl font-bold text-center mb-10 text-[#4B2E2E]">
+        Sanatçılar
+      </h1>
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {artists.map((artist) => (
+          <div
+            key={artist.id}
+            onClick={() => openModal(artist)}
+            className="bg-[#F4EDE4] shadow-lg rounded-lg overflow-hidden cursor-pointer hover:shadow-xl transition-shadow duration-300"
+          >
+            <img
+              src={artist.image}
+              alt={artist.name}
+              className="w-full h-64 object-cover"
+            />
+            <div className="p-6">
+              <h2 className="text-2xl font-semibold text-[#4B2E2E]">
+                {artist.name}
               </h2>
-              <p className="text-[#4B2E2E] mt-4 whitespace-pre-line">
-                {selectedArtist.details}
-              </p>
+              <p className="text-[#4B2E2E] mt-4">{artist.bio}</p>
             </div>
           </div>
-        )}
+        ))}
       </div>
-    );
-  };
-  
-  export default ArtistsPage;
+
+      {/* Modal */}
+      {selectedArtist && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-[#F4EDE4] rounded-lg shadow-lg w-11/12 md:w-2/3 lg:w-1/2 p-6 relative">
+            <button
+              onClick={closeModal}
+              className="absolute top-3 right-3 text-gray-500 hover:text-gray-800"
+            >
+              ✖
+            </button>
+            <img
+              src={selectedArtist.image}
+              alt={selectedArtist.name}
+              className="w-full h-64 object-cover rounded-md mb-4"
+            />
+            <h2 className="text-3xl font-bold text-[#4B2E2E]">
+              {selectedArtist.name}
+            </h2>
+            <p className="text-[#4B2E2E] mt-4 whitespace-pre-line">
+              {selectedArtist.details}
+            </p>
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default ArtistsPage;

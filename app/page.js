@@ -9,34 +9,37 @@ export default function Home() {
       <div className="flex justify-center items-center gap-x-10">
         <div className="flex flex-col justify-center items-center gap-y-5">
           <img
-            src="/bg1.jpg"
+            src="/elyapimiurunler.jpg"
             className="w-92 h-52 rounded-lg mt-10"
-            alt="" />
+            alt=""
+          />
           <Link
             href="/"
-            className="bg-white text-black rounded-lg px-2">
+            className="text-[#4B2E2E] rounded-lg px-2">
             El Yapımı Ürünler
           </Link>
         </div>
         <div className="flex flex-col justify-center items-center gap-y-5">
           <img
-            src="/bg2.jpg"
+            src="/sanatcilarımız.jpg"
             className="w-92 h-52 rounded-lg mt-10"
-            alt="" />
+            alt=""
+          />
           <Link
             href="/"
-            className="bg-white text-black rounded-lg px-2">
+            className="text-[#4B2E2E] rounded-lg px-2">
             Sanatçılarımız
           </Link>
         </div>
         <div className="flex flex-col justify-center items-center gap-y-5">
           <img
-            src="/bg3.jpg"
+            src="/kulturelbilgiler.jpg"
             className="w-92 h-52 rounded-lg mt-10"
-            alt="" />
+            alt=""
+          />
           <Link
             href="/"
-            className="bg-white text-black rounded-lg px-2">
+            className="text-[#4B2E2E] rounded-lg px-2">
             Kültürel Bilgiler
           </Link>
         </div>
