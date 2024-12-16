@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 
 const libraryContent = [
     {
@@ -89,7 +90,7 @@ const LibraryPage = () => {
                                 {item.excerpt}
                             </p>
                             <a
-                                href={`/library/${item.slug}`}
+                                href={`/pages/libraryPage${item.slug}`}
                                 style={{
                                     display: "flex", 
                                     justifyContent: "center", 
