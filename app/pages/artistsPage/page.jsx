@@ -140,28 +140,28 @@ const ArtistsPage = () => {
             </div>
 
             {selectedArtist && (
-                <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-                    <div className="bg-[#F4EDE4] rounded-lg shadow-lg w-11/12 md:w-2/3 lg:w-1/2 p-6 relative">
-                        <button
-                            onClick={closeModal}
-                            className="absolute top-3 right-3 text-gray-500 hover:text-gray-800"
-                        >
-                            ✖
-                        </button>
-                        <img
-                            src={selectedArtist.image}
-                            alt={selectedArtist.name}
-                            className="w-full h-64 object-cover rounded-md mb-4"
-                        />
-                        <h2 className="text-3xl font-bold text-[#4B2E2E]">
-                            {selectedArtist.name}
-                        </h2>
-                        <p className="text-[#4B2E2E] mt-4 whitespace-pre-line">
-                            {selectedArtist.details}
-                        </p>
-                    </div>
-                </div>
-            )}
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+        <div className="bg-[#F4EDE4] rounded-lg shadow-lg w-11/12 md:w-2/3 lg:w-1/2 p-6 relative">
+            <button
+                onClick={closeModal}
+                className="absolute top-3 right-3 text-gray-500 hover:text-gray-800"
+            >
+                ✖
+            </button>
+            <img
+                src={selectedArtist.image}
+                alt={selectedArtist.name}
+                className="w-full h-64 object-contain rounded-md mb-4"
+            />
+            <h2 className="text-3xl font-bold text-[#4B2E2E]">
+                {selectedArtist.name}
+            </h2>
+            <p className="text-[#4B2E2E] mt-4 whitespace-pre-line">
+                {selectedArtist.details}
+            </p>
+        </div>
+    </div>
+)}
         </div>
     );
 };

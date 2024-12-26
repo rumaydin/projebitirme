@@ -55,9 +55,9 @@ const Navbar = () => {
                     <li>
                         <Link href="/">
                             <img
-                                src="/logo.jpg"
+                                src="/logo.png"
                                 alt="Logo"
-                                className="h-20 object-contain"
+                                className="h-14 w-auto object-contain mx-auto"
                             />
                         </Link>
                     </li>
