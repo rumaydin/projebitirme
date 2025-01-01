@@ -413,7 +413,7 @@ export default function DynamicLibraryPage({ params }) {
                 {/* Görsel ve Başlık */}
                 <div className="relative w-screen h-[400px]">
                     <img
-                        src={content.image}
+                        src="/deneme.jpeg" // Görsel deneme.jpeg olarak değiştirildi
                         alt="Sanatçılardan İlham"
                         className="w-screen h-full object-cover"
                     />
@@ -431,7 +431,11 @@ export default function DynamicLibraryPage({ params }) {
     
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                         {content.artists.map((artist, index) => (
-                            <div key={index} className="border rounded-lg overflow-hidden shadow-md">
+                            <div
+                                key={index}
+                                className="border rounded-lg overflow-hidden shadow-md"
+                                style={{ backgroundColor: '#F4EDE4' }}
+                            >
                                 <img
                                     src={artist.image}
                                     alt={artist.name}
@@ -469,7 +473,7 @@ export default function DynamicLibraryPage({ params }) {
             {/* Görsel ve Başlık */}
             <div className="relative w-screen h-[400px]">
                 <img
-                    src={content.image}
+                    src="/deneme.jpeg" // Görsel yolu deneme.jpeg olarak değiştirildi
                     alt={content.title}
                     className="w-screen h-full object-cover"
                 />
